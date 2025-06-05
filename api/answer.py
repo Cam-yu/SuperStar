@@ -35,8 +35,8 @@ class CacheDAO:
 
 class Tiku:
     CONFIG_PATH = "config.ini"  # 默认配置文件路径
-    DISABLE = False     # 停用标志
-    SUBMIT = False      # 提交标志
+    DISABLE = True     # 停用标志
+    SUBMIT = True      # 提交标志
 
     def __init__(self) -> None:
         self._name = None
@@ -185,7 +185,7 @@ class TikuYanxi(Tiku):
         super().__init__()
         self.name = '言溪题库'
         self.api = 'https://tk.enncy.cn/query'
-        self._token = None
+        self._token = abadd00fa44640d79b9f8d48bbf56f40
         self._token_index = 0   # token队列计数器
         self._times = 100   # 查询次数剩余，初始化为100，查询后校对修正
 
